@@ -1,0 +1,38 @@
+<!--<html>-->
+
+<head>
+  <script type="text/javascript">
+    //CheckBox
+    function checkbox() {
+      var result = "";
+
+      var yoga = document.getElementById("Yoga").checked; //true
+      var swim = document.getElementById("Swim").checked;
+      var read = document.getElementById("Read").checked;
+
+      if (yoga == true)
+        result = result + document.getElementById("Yoga").value + " ";
+      if (swim == true)
+        result = result + document.getElementById("Swim").value + " ";
+      if (read == true)
+        result = result + document.getElementById("Read").value + " ";
+
+      document.getElementById("p1").innerHTML = result;
+    }
+  </script>
+  <title>Checkbox</title>
+</head>
+
+<body>
+  <form>
+    Yoga <input type="checkbox" id="Yoga" name="hobby" value="Yogasan" /><br />
+    Swimming
+    <input type="checkbox" id="Swim" name="hobby" value="Swimming" /><br />
+    Reading
+    <input type="checkbox" id="Read" name="hobby" value="Reading Books" /><br />
+
+    <p id="p1"></p>
+
+    <input type="button" value="Print" size="20" onClick="checkbox()" />
+  </form>
+</body>

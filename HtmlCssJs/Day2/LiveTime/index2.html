@@ -1,0 +1,43 @@
+Current Time: <span id="txt"></span>
+<script>
+  //window onload is an event which gets fired once
+  //our page loads in the browswer
+
+  window.onload=function(){getTime();} 
+  // getTime();
+
+  //it is our own function
+  function getTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var ms = today.getMilliseconds();
+
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    // ms = checkTime(ms);
+
+    document.getElementById("txt").innerHTML = h + "-" + m + "-" + s+"-"+ms;
+    //settimeout -it is a readymade function
+    //which is used for calling a function after certain time
+
+    // setTimeout(function () {
+    //   getTime();
+    // }, 1000);
+
+    setTimeout(function () {
+      getTime();
+    }, );
+  }
+  //setInterval("getTime()",1000);//another way
+  //i inside function is the name of our own variable
+
+  function checkTime(p) {
+    if (p < 10) {
+      p = "0" + p;
+    }
+    return p;
+  }
+</script>

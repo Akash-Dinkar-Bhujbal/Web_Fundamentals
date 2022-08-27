@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script>
+      function sample() {
+        var count = 0;
+
+        if (document.getElementById("myRadio1").checked == true) count = count + 1;
+
+        if (document.getElementById("myRadio4").checked == true) count++;//postIncrement
+
+        // show correct oprion myRadio
+        if (document.getElementById("myRadio6").checked == true) ++count;//PreIncrement
+
+        document.getElementById("p1").innerHTML = "Your score is " + count;
+      }
+    </script>
+  </head>
+  <body>
+    What is sqaue rood 2 ?
+    <br />
+    <input type="radio" id="myRadio1" value="4" name="r5" />4
+    <br />
+    <input type="radio" id="myRadio2" value="8" name="r5" />8
+    <br />
+    What is sqaue rood 25 ?
+    <br />
+    <input type="radio" id="myRadio3" value="3" name="r6" />3
+    <br />
+    <input type="radio" id="myRadio4" value="5" name="r6" />5
+    <br />
+    What is sqaue rood 3 ?
+    <br />
+    <input type="radio" id="myRadio5" value="9" name="r7" />9
+    <br />
+    <input type="radio" id="myRadio6" value="81" name="r7" />81
+    <br />
+    <p id="p1">Answer</p>
+    <input type="button" id="b1" onclick="sample()" value="click" />
+  </body>
+</html>

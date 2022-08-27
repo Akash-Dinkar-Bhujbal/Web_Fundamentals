@@ -1,0 +1,34 @@
+<script>
+  /*Array in JS*/
+  var emp1 = new Array();
+  emp1[0] = 2;
+  emp1[1] = 4;
+  emp1[2] = 1;
+  emp1[3] = 3;
+  //----------------------------------------------
+  var emp2 = new Array(3, 1, 4, 5);
+  //length:
+  // document.write("Number of elemnts  "+emp1.length)
+  // document.write("Number of elemnts  "+emp2.length)
+
+  /*Print An Array*/
+  for (x = 0; x < emp2.length; x++) {
+    document.write(emp2[x]);
+    document.write(" ");
+  }
+  //-------------------------------------------------
+  var i,
+    sum = 0,
+    max = 0;
+
+  for (i = 0; i < emp2.length; i++) {
+    if (emp2[i] > max) max = emp2[i]; //13
+    sum = sum + emp2[i]; //13,14,18,
+  }
+
+  document.write("<br>");
+  document.write("<br>");
+
+  document.write("Maximum number in array is  " + max);
+  document.write("<br>Sum of all elements in array is  " + sum);
+</script>

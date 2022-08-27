@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <script>
+    function Button_OnClick() {
+      var x = document.getElementById("name").value;
+      if (x == "") x = null;
+
+      var y;
+      var ele = document.getElementsByName("gender");
+      for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) y = ele[i].value;
+      }
+      if (y == undefined) y = null; //NullOption1
+
+      var z = "*"; //NullOption2
+      var markedCheckbox = document.getElementsByName("Hobbies");
+      for (var checkbox of markedCheckbox) {
+        if (checkbox.checked) z += checkbox.value + "*";
+      }
+      if (z == "*") z = null;
+      
+
+      document.getElementById("result").innerHTML =
+        "Your name is " + x + "\nGender: " + y + "\nHobbies: " + z;
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>Enter a Name: <input type="text" id="name" /></p>
+
+    <label>Gender: </label>
+    <input type="radio" id="myRadio1" value="Male" name="gender" />Male
+    <input type="radio" id="myRadio2" value="Female" name="gender" />Female
+    <br />
+    <br />
+
+    <label>Hobbies:</label>
+    <br />
+
+    <input type="checkbox" id="Reading" name="Hobbies" value="Reading" />Reading<br />
+
+    <input type="checkbox" id="Swimming" name="Hobbies" value="Swimming" />Swimming<br />
+
+    <input type="checkbox" id="Yoga" name="Hobbies" value="Yoga" />Yoga<br />
+    <br />
+
+    <select id="city">
+      <option>Choose an option</option>
+      <option value="l1">Thane</option>
+      <option value="l2">Airoli</option>
+      <option value="l3">Dadar</option>
+      <option value="l4">Mulund</option>
+    </select>
+    <p id="lbp"></p>
+    <br />
+    <p><input type="Button" value="Submit" onclick="Button_OnClick()" /></p>
+    <pre id="result"></pre>
+  </form>
+</body>
+
+</html>

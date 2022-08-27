@@ -1,0 +1,27 @@
+<script>
+  /*Outputs in Console:*/
+  let show = function () {
+    console.log("Anonymous function");
+  };
+
+  show();
+
+  //***********************************************
+
+  let add = function (a, b) {
+    return a + b;
+  };
+
+  console.log(add(9, 4));
+
+  //***********************************************
+/*Lambda/ Arrow/ Anonymous function*/
+  let sum = (a, b) => a + b;
+
+  console.log(sum(9, 4));
+
+  //************************
+
+  let sq = (a, b, c) => a * b * c;
+  console.log(sq(3, 2, 5));
+</script>

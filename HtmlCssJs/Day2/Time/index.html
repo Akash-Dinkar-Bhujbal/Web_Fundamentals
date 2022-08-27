@@ -1,0 +1,10 @@
+<!-- Current Time -->
+Current Time:<span id="txt"></span>
+
+<script>
+  var today = new Date();
+  var m = today.getHours();
+  var d = today.getMinutes();
+  var h = today.getSeconds();
+  document.getElementById("txt").innerHTML = m + ":" + d + ":" + h;
+</script>

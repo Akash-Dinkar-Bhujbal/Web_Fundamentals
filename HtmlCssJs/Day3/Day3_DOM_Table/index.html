@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   body {
+      text-align: center;
+      background-color: #fff;
+      color: #0197F6;
+   }
+   h1 {
+      color: #23CE6B;
+   }
+   .btn {
+      background-color: #fff;
+      border: 1.5px dashed #0197F6;
+      height: 2rem;
+      border-radius: 2px;
+      width: 60%;
+      margin: 2rem auto;
+      display: block;
+      color: #0197F6;
+      outline: none;
+      cursor: pointer;
+   }
+</style>
+</head>
+<body>
+<h1>DOM table Object Demo</h1>
+<button onclick="createTable()" class="btn">Create a table object</button>
+<script>
+   function createTable() {
+      var table = document.createElement("TABLE");
+      table.innerHTML = `<tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+      </tr>
+      <tr>
+      <td>Data 3</td>
+      <td>Data 4</td>
+      </tr>`;
+      table.setAttribute('border', "2");
+      table.style.margin = "2rem auto";
+      document.body.appendChild(table);
+   }
+</script>
+</body>
+</html>
